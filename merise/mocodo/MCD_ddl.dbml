@@ -1,0 +1,64 @@
+Table "BE PART OF" {
+  "nume_product" VARCHAR(42) [NOT NULL]
+  "num_order"    VARCHAR(42) [NOT NULL]
+  "quantity"     VARCHAR(42)
+  Indexes {
+    ("nume_product", "num_order") [pk]
+  }
+}
+
+Table "Category" {
+  "num_category" VARCHAR(42) [pk, NOT NULL]
+  "name"         VARCHAR(42)
+  "created_at"   VARCHAR(42)
+  "updated_at"   VARCHAR(42)
+}
+
+Table "COMBINE" {
+  "num_tag"      VARCHAR(42) [NOT NULL]
+  "nume_product" VARCHAR(42) [NOT NULL]
+  Indexes {
+    ("num_tag", "nume_product") [pk]
+  }
+}
+
+Table "Order" {
+  "num_order"   VARCHAR(42) [pk, NOT NULL]
+  "num_invoice" VARCHAR(42)
+  "status"      VARCHAR(42)
+  "created_at"  VARCHAR(42)
+  "updated_at"  VARCHAR(42)
+  "num_user"    VARCHAR(42) [NOT NULL]
+}
+
+Table "Product" {
+  "nume_product" VARCHAR(42) [pk, NOT NULL]
+  "name"         VARCHAR(42)
+  "quantity"     VARCHAR(42)
+  "status"       VARCHAR(42)
+  "created_at"   VARCHAR(42)
+  "updated_at"   VARCHAR(42)
+  "num_category" VARCHAR(42) [NULL]
+}
+
+Table "Tag" {
+  "num_tag"    VARCHAR(42) [pk, NOT NULL]
+  "name"       VARCHAR(42)
+  "created_at" VARCHAR(42)
+  "updated_at" VARCHAR(42)
+}
+
+Table "User" {
+  "num_user"   VARCHAR(42) [pk, NOT NULL]
+  "name"       VARCHAR(42)
+  "password"   VARCHAR(42)
+  "created_at" VARCHAR(42)
+  "updated_at" VARCHAR(42)
+}
+
+Ref:"BE PART OF"."nume_product" > "Product"."nume_product"
+Ref:"BE PART OF"."num_order" > "Order"."num_order"
+Ref:"COMBINE"."num_tag" > "Tag"."num_tag"
+Ref:"COMBINE"."nume_product" > "Product"."nume_product"
+Ref:"Order"."num_user" > "User"."num_user"
+Ref:"Product"."num_category" > "Category"."num_category"

@@ -1,0 +1,19 @@
+%%mocodo
+:::
+Product: nume_product, name, quantity, status, created_at, updated_at, #num_category > Category > num_category
+:
+BE PART OF: #nume_product > Product > nume_product, _#num_order > Order > num_order, quantity
+:
+Order: num_order, num_invoice, status, created_at, updated_at, #num_user > User > num_user
+:::
+
+
+:
+Category: num_category, name, created_at, updated_at
+:
+COMBINE: #num_tag > Tag > num_tag, _#nume_product > Product > nume_product
+:
+Tag: num_tag, name, created_at, updated_at
+:::
+User: num_user, name, password, created_at, updated_at
+:

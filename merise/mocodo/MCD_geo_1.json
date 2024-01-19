@@ -1,0 +1,42 @@
+{
+  "width": 588,
+  "height": 289,
+  "cx": [
+    [ "ASSOCIATE", 58 ],
+    [ "PRODUCT", 183 ],
+    [ "BE_PART_OF", 309 ],
+    [ "ORDER", 429 ],
+    [ "CATEGORY", 58 ],
+    [ "COMBINE", 183 ],
+    [ "TAG", 309 ],
+    [ "PLACE_AN", 429 ],
+    [ "USER", 539 ]
+  ],
+  "cy": [
+    [ "ASSOCIATE", 77 ],
+    [ "PRODUCT", 77 ],
+    [ "BE_PART_OF", 77 ],
+    [ "ORDER", 77 ],
+    [ "CATEGORY", 221 ],
+    [ "COMBINE", 221 ],
+    [ "TAG", 221 ],
+    [ "PLACE_AN", 221 ],
+    [ "USER", 221 ]
+  ],
+  "shift": [
+    [ "ASSOCIATE,CATEGORY,0", 0 ],
+    [ "ASSOCIATE,PRODUCT,0", 0 ],
+    [ "BE_PART_OF,PRODUCT,0", 0 ],
+    [ "BE_PART_OF,ORDER,0", 0 ],
+    [ "COMBINE,TAG,0", 0 ],
+    [ "COMBINE,PRODUCT,0", 0 ],
+    [ "PLACE_AN,USER,0", 0 ],
+    [ "PLACE_AN,ORDER,0", 0 ]
+  ],
+  "ratio": [
+    [ "ASSOCIATE,PRODUCT,0", 1.0 ],
+    [ "BE_PART_OF,ORDER,0", 1.0 ],
+    [ "COMBINE,PRODUCT,0", 1.0 ],
+    [ "PLACE_AN,ORDER,0", 1.0 ]
+  ]
+}
